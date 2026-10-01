@@ -11,7 +11,7 @@ Future<Weather> fetchWeatherWithDio(String city) async {
     // dio แปลง JSON response.data ให้เป็น Map ให้อัตโนมัติ ไม่ต้องเรียก jsonDecode เอง
     final response = await dio.get(
       'https://api.openweathermap.org/data/2.5/weather',
-      queryParameters: {'q': city, 'appid': 'cce3235279dab0c78de9d6a2fc80ee89', 'units': 'metric'},
+      queryParameters: {'q': city, 'appid': 'your api', 'units': 'metric'},
     );
     return Weather.fromJson(response.data as Map<String, dynamic>);
   } on DioException catch (e) {
