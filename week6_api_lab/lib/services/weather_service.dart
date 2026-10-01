@@ -6,7 +6,7 @@ import '../models/weather.dart';
 class WeatherService {
   static const _baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
   // TODO: อย่าลืมเปลี่ยน YOUR_API_KEY เป็นคีย์จริงของคุณแบบเดียวกับที่ใส่ใน Postman
-  static const _apiKey = 'cce3235279dab0c78de9d6a2fc80ee89';
+  static const _apiKey = 'put your key';
 
   Future<Weather> fetchWeather(String city) async {
     final uri = Uri.parse('$_baseUrl?q=$city&appid=$_apiKey&units=metric&lang=th');
